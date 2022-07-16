@@ -1,5 +1,6 @@
 <script>
     let showModal = false;
+    let isPromo = true;
 
     const toggleModal = () => {
         showModal = !showModal;
@@ -8,7 +9,7 @@
 
 <button on:click={toggleModal}>Toggle Modal</button>
 {#if showModal === true}
-    <div class="backdrop">
+    <div class="backdrop" class:promo={isPromo}>
         <div class="modal">
             <p>Sign up for offers</p>
         </div>
@@ -29,5 +30,10 @@
         margin: 10% auto;
         text-align: center;
         background: white;
+    }
+
+    .promo .modal {
+        background: crimson;
+        color: white;
     }
 </style>
