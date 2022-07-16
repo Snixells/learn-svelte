@@ -7,7 +7,7 @@
 </script>
 
 <main>
-	<p>{fullName} from {city}</p>
+	<p>{fullName} from {city}!</p>
 	<input type="text" bind:value={firstName}>
 	<input type="text" bind:value={lastName}>
 	<input type="text" bind:value={city}>

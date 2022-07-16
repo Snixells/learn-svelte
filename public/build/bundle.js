@@ -366,10 +366,11 @@ var app = (function () {
     	let t1;
     	let t2;
     	let t3;
-    	let input0;
     	let t4;
-    	let input1;
+    	let input0;
     	let t5;
+    	let input1;
+    	let t6;
     	let input2;
     	let mounted;
     	let dispose;
@@ -381,19 +382,20 @@ var app = (function () {
     			t0 = text(/*fullName*/ ctx[3]);
     			t1 = text(" from ");
     			t2 = text(/*city*/ ctx[2]);
-    			t3 = space();
-    			input0 = element("input");
+    			t3 = text("!");
     			t4 = space();
-    			input1 = element("input");
+    			input0 = element("input");
     			t5 = space();
+    			input1 = element("input");
+    			t6 = space();
     			input2 = element("input");
     			add_location(p, file, 9, 1, 148);
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file, 10, 1, 179);
+    			add_location(input0, file, 10, 1, 180);
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file, 11, 1, 223);
+    			add_location(input1, file, 11, 1, 224);
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file, 12, 1, 266);
+    			add_location(input2, file, 12, 1, 267);
     			attr_dev(main, "class", "svelte-1tky8bj");
     			add_location(main, file, 8, 0, 140);
     		},
@@ -406,13 +408,14 @@ var app = (function () {
     			append_dev(p, t0);
     			append_dev(p, t1);
     			append_dev(p, t2);
-    			append_dev(main, t3);
+    			append_dev(p, t3);
+    			append_dev(main, t4);
     			append_dev(main, input0);
     			set_input_value(input0, /*firstName*/ ctx[0]);
-    			append_dev(main, t4);
+    			append_dev(main, t5);
     			append_dev(main, input1);
     			set_input_value(input1, /*lastName*/ ctx[1]);
-    			append_dev(main, t5);
+    			append_dev(main, t6);
     			append_dev(main, input2);
     			set_input_value(input2, /*city*/ ctx[2]);
 
