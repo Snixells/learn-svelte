@@ -21,7 +21,9 @@
 </script>
 
 <Modal isPromo={false} {showModal} on:click={toggleModal}>
-	<h3>Add a new person</h3>
+	<div slot="title">
+		<h3>Add a new person</h3>
+	</div>
 	<form>
 		<input type="text" placeholder="name" />
 		<input type="text" placeholder="belt color" />
