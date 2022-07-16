@@ -128,3 +128,6 @@ _actual*.*
 _output
 /types
 
+# Public Folder for better git readability 
+public
+
