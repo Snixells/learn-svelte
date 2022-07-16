@@ -4,7 +4,10 @@
 	let city = 'Orlando';
 
 	$: fullName = `${firstName} ${lastName}`
-	$: console.log(city)
+	$: {
+		console.log(city);
+		console.log(fullName);
+	}
 </script>
 
 <main>
