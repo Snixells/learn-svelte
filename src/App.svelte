@@ -15,6 +15,9 @@
 	{#each people as person (person.id)}
 		<div>
 			<h4>{person.name}</h4>
+			{#if person.beltColour === "black"}
+				<p><strong>NINJAA</strong></p>
+			{/if}
 			<p>{person.age} {person.beltColour}</p>
 			<button on:click={() => removePerson(person.id)}>Delete</button>
 		</div>
