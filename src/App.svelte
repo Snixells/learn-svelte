@@ -4,6 +4,7 @@
 	let city = 'Orlando';
 
 	$: fullName = `${firstName} ${lastName}`
+	$: console.log(city)
 </script>
 
 <main>
