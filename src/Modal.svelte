@@ -1,6 +1,7 @@
 <script>
+    export let message = "Please specify message attribute";
+    export let isPromo = false;
     let showModal = false;
-    let isPromo = true;
 
     const toggleModal = () => {
         showModal = !showModal;
@@ -11,7 +12,7 @@
 {#if showModal === true}
     <div class="backdrop" class:promo={isPromo}>
         <div class="modal">
-            <p>Sign up for offers</p>
+            <p>{message}</p>
         </div>
     </div>
 {/if}
