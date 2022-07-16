@@ -1,5 +1,8 @@
 <script>
 	import Modal from "./Modal.svelte";
+
+	let showModal = false;
+
 	let people = [
 		{ name: "yoshi", beltColour: "black", age: 25, id: 1 },
 		{ name: "mario", beltColour: "orange", age: 45, id: 2 },
@@ -10,10 +13,20 @@
 		// Remove person from array
 		people = people.filter((person) => person.id != id);
 	};
+
+	const toggleModal = () => {
+		showModal = !showModal;
+	};
 </script>
 
-<Modal message="Hello, this is me" isPromo={true} />
+<Modal
+	message="Hello, this is me"
+	isPromo={true}
+	{showModal}
+	on:click={toggleModal}
+/>
 <main>
+	<button on:click={toggleModal}>Toggle Modal</button>
 	{#each people as person (person.id)}
 		<div>
 			<h4>{person.name}</h4>

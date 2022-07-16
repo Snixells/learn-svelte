@@ -1,16 +1,11 @@
 <script>
     export let message = "Please specify message attribute";
     export let isPromo = false;
-    let showModal = false;
-
-    const toggleModal = () => {
-        showModal = !showModal;
-    };
+    export let showModal = false;
 </script>
 
-<button on:click={toggleModal}>Toggle Modal</button>
 {#if showModal === true}
-    <div class="backdrop" class:promo={isPromo}>
+    <div class="backdrop" class:promo={isPromo} on:click>
         <div class="modal">
             <p>{message}</p>
         </div>
