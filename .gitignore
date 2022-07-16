@@ -129,5 +129,5 @@ _output
 /types
 
 # Public Folder for better git readability 
-public
+public/build
 
