@@ -1,4 +1,5 @@
 <script>
+	import { get_all_dirty_from_scope } from "svelte/internal";
 	import Modal from "./Modal.svelte";
 
 	let showModal = false;
@@ -19,12 +20,14 @@
 	};
 </script>
 
-<Modal
-	message="Hello, this is me"
-	isPromo={true}
-	{showModal}
-	on:click={toggleModal}
-/>
+<Modal isPromo={false} {showModal} on:click={toggleModal}>
+	<h3>Add a new person</h3>
+	<form>
+		<input type="text" placeholder="name" />
+		<input type="text" placeholder="belt color" />
+		<button>Add person</button>
+	</form>
+</Modal>
 <main>
 	<button on:click|once={toggleModal}>Toggle Modal</button>
 	{#each people as person (person.id)}
