@@ -1,6 +1,7 @@
 <script>
 	import Header from "./components/Header.svelte";
 	import Footer from "./components/Footer.svelte";
+	import CreatePollForm from "./components/CreatePollForm.svelte";
 	import Tabs from "./shared/Tabs.svelte";
 
 	// tabs
@@ -15,6 +16,7 @@
 <Header />
 <main>
 	<Tabs {activeItem} {items} on:tabChange={tabChange} />
+	<CreatePollForm />
 </main>
 <Footer />
 
