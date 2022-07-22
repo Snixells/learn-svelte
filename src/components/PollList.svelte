@@ -1,23 +1,10 @@
 <script>
-    import { onDestroy } from "svelte";
-
     import PollStore from "../stores/PollStore";
     import PollDetails from "./PollDetails.svelte";
-
-    export let polls = [];
-
-    const unsub = PollStore.subscribe((data) => {
-        polls = data;
-    });
-
-    onDestroy(() => {
-        console.log("Destroyed :/");
-        unsub();
-    });
 </script>
 
 <div class="poll-list">
-    {#each polls as poll (poll.id)}
+    {#each $PollStore as poll (poll.id)}
         <div>
             <PollDetails {poll} on:vote />
         </div>
