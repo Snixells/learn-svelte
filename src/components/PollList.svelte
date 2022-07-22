@@ -1,11 +1,18 @@
 <script>
+    import { onDestroy } from "svelte";
+
     import PollStore from "../stores/PollStore";
     import PollDetails from "./PollDetails.svelte";
 
     export let polls = [];
 
-    PollStore.subscribe((data) => {
+    const unsub = PollStore.subscribe((data) => {
         polls = data;
+    });
+
+    onDestroy(() => {
+        console.log("Destroyed :/");
+        unsub();
     });
 </script>
 
