@@ -1,5 +1,8 @@
 <script>
+    import Title from "$lib/title.svelte";
 </script>
+
+<Title />
 
 <div class="index">
     <h2>Welcome</h2>
