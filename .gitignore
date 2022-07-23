@@ -127,7 +127,3 @@ node_modules
 _actual*.*
 _output
 /types
-
-# Public Folder for better git readability 
-public/build
-
