@@ -3,6 +3,8 @@
         const res = await fetch("https://jsonplaceholder.typicode.com/posts");
         const guides = await res.json();
 
+        console.log(guides);
+
         if (res.ok) {
             return {
                 props: {
